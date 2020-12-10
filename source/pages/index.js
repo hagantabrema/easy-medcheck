@@ -1,3 +1,4 @@
+//Import dan Export halaman aplikasi
 import Home from './Home'
 import Klinik from './Klinik'
 import MedCheck from './MedCheck'

@@ -2,8 +2,10 @@ import React, { useEffect } from 'react'
 import { StyleSheet, Text, View, ImageBackground, Image } from 'react-native'
 import { SplashScreen, Logo, LogoText } from '../assets'
 
+//Splash Screen
 const Splash = ({ navigation }) => {
     
+    //navigation dari splash screen ke home, 2000 itu 2000ms = 2 detik => durasi splash screen
     useEffect(() => {
         setTimeout( () => {
             navigation.replace('MainApp');
