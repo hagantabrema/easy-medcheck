@@ -4,19 +4,19 @@ import { SplashScreen, Logo, LogoText } from '../assets'
 
 //Splash Screen
 const Splash = ({ navigation }) => {
-    
+
     //navigation dari splash screen ke home, 2000 itu 2000ms = 2 detik => durasi splash screen
     useEffect(() => {
-        setTimeout( () => {
+        setTimeout(() => {
             navigation.replace('MainApp');
         }, 2000)
     }, [navigation]);
 
     return (
-       <ImageBackground source={SplashScreen} style={styles.background}>
-           <Text source={Text} style={styles.logoText}/>
-           <Image source={Logo} style={styles.logo} />
-       </ImageBackground>
+        <ImageBackground source={SplashScreen} style={styles.background}>
+            <Image source={LogoText} style={styles.logoText} />
+            <Image source={Logo} style={styles.logo} />
+        </ImageBackground>
     )
 }
 
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     },
     logo: {
         width: 250,
-        height: 250
+        height: 250,
     },
     logoText: {
         alignItems: 'center'
