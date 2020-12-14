@@ -1,10 +1,11 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native'
 
 const Klinik = () => {
     return (
         <View>
-            <Text>Klinik</Text>
+            <Image source={require('../assets/images/dummyloc.png')} />
+            <Text style={{alignItems: 'center'}}>Dummy Gmaps</Text>
         </View>
     )
 }
