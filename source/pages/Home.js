@@ -56,7 +56,7 @@ export default class Home extends Component {
                             </View>
                         </View>
                         <View style={[{ width: "20%", height: 50, margin: 22, justifyContent: 'space-around', alignItems: 'center', backgroundColor: "white", borderRadius: 10 }]}>
-                            <TouchableHighlight onPress={() => this.props.navigation.navigate('News')}>
+                        <TouchableHighlight onPress={() => this.props.navigation.navigate('News')}>
                                 <Image style={styles.icon} source={require('../assets/icons/news.png')} />
                             </TouchableHighlight>
                             <View style={[{ width: "100%", height: 4, marginBottom: -20, marginTop: 10, justifyContent: 'space-around', alignItems: 'center' }]}>
