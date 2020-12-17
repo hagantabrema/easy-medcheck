@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, Image, ScrollView, TouchableOpacity } from 'react-native'
+import { Text, StyleSheet, View, Image, ScrollView } from 'react-native'
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import { ACTIVE_COLOR, INACTIVE_COLOR } from '../utils/constant'
 
 export default class MedCheckResult extends Component {
@@ -13,11 +14,9 @@ export default class MedCheckResult extends Component {
             <View>
                 {/* STATUS BAR */}
                 <View style={{ flexDirection: 'row', backgroundColor: "#C14950" }}>
-                    <View style={{ margin: 15 }}>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('Home')}>
+                    <TouchableOpacity style={{ margin: 15 }} onPress={() => this.props.navigation.navigate('MedCheck')}>
                         <Image source={require('../assets/icons/backArrow.png')} />
-                        </TouchableOpacity>
-                    </View>
+                    </TouchableOpacity>
                     <View>
                         <Text style={styles.textStatus}>Hasil Analisa</Text>
                     </View>

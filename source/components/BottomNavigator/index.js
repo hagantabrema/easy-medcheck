@@ -63,6 +63,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     justifyContent: 'space-between',
     paddingHorizontal: 44,
-    paddingVertical: 15
+    paddingVertical: 15,
+    borderTopColor: '#F0F0F0',
+    borderTopWidth: 2
   }
 })

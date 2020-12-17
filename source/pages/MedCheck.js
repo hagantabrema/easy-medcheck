@@ -25,6 +25,14 @@ export default class MedCheck extends Component {
     render() {
         return (
             <View style={{ flex: 3 }}>
+                <View style={{ flexDirection: 'row', backgroundColor: "#C14950" }}>
+                    <TouchableOpacity style={{ margin: 15 }} onPress={() => this.props.navigation.navigate('Home')}>
+                        <Image source={require('../assets/icons/backArrow.png')} />
+                    </TouchableOpacity>
+                    <View>
+                        <Text style={styles.textStatus}>Periksa Gejala</Text>
+                    </View>
+                </View>
                 <View style={{ flexDirection: 'row', width: "90%", margin: 15, marginLeft: 17, borderRadius: 10, alignContent: 'space-around' }}>
                     <Text style={{ fontSize: 24, fontWeight: 'bold', margin: 10 }}>Easy Medcheck</Text>
                     <Image style={{ height: 90, width: 90, marginLeft: 30 }} source={require('../assets/images/logo.png')} />
@@ -82,5 +90,11 @@ const styles = StyleSheet.create({
         padding: 12,
         borderRadius: 10,
         marginTop: 10
-    }
+    },
+    textStatus: {
+        color: 'white',
+        marginTop: 12,
+        fontSize: 18,
+        fontWeight: 'bold'
+    },
 })

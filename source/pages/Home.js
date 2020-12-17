@@ -31,9 +31,10 @@ export default class Home extends Component {
                     <View style={{ margin: 5 }}>
                         <Image source={require('../assets/icons/search.png')} />
                     </View>
-                    <View style={styles.input}>
-                        <TextInput
-                            placeholder="Cari gejala penyakit"
+                    <View>
+                        <TextInput style={styles.input}
+                            placeholder="Cari gejala penyakit..."
+                            //placeholderTextColor="#000"
                             onChangeText={this.onChangeText}
                             defaultValue={this.state.text}
                         />
@@ -109,15 +110,7 @@ export default class Home extends Component {
 
 const styles = StyleSheet.create({
     input: {
-        width: 320,
-        height: 46,
-        marginLeft: 17,
-        borderRadius: 5,
-    },
-    item: {
-        padding: 10,
-        fontSize: 18,
-        height: 44,
+        marginLeft: 5
     },
     table: {
         flex: 1,
