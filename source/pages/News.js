@@ -9,6 +9,12 @@ export default class News extends Component {
     render() {
         return (
             <View>
+                {/* STATUS BAR */}
+                <View style={{ flexDirection: 'row', backgroundColor: "#C14950" }}>
+                    <TouchableOpacity style={{ margin: 15 }} onPress={() => this.props.navigation.navigate('Home')}>
+                        <Image source={require('../assets/icons/backArrow.png')} />
+                    </TouchableOpacity>
+                </View>
                 {/* BERITA */}
                 <ScrollView>
                     <View style={styles.table}>
