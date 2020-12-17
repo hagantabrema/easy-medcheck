@@ -6,6 +6,7 @@ import SignUp from './SignUp'
 import Login from './Login'
 import MedCheckResult from './MedCheckResult'
 import News from './News'
+import NewsDetail from './NewsDetail'
 import Splash from './Splash'
 
 export {
@@ -16,5 +17,6 @@ export {
     Login,
     SignUp,
     News,
+    NewsDetail,
     Splash
 }

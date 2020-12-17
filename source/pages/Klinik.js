@@ -25,7 +25,6 @@ export default class Klinik extends Component {
                 {/* MAPS */}
                 <View>
                     <Image source={require('../assets/images/dummyloc.png')} />
-                    <Text style={{ alignItems: 'center' }}>Dummy Gmaps</Text>
                 </View>
             </View>
         )

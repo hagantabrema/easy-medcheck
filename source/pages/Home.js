@@ -61,7 +61,7 @@ export default class Home extends Component {
                             </View>
                         </View>
                         <View style={[{ width: "20%", height: 50, margin: 22, justifyContent: 'space-around', alignItems: 'center', backgroundColor: "white", borderRadius: 10 }]}>
-                        <TouchableOpacity onPress={() => this.props.navigation.navigate('News')}>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('News')}>
                                 <Image source={require('../assets/icons/news.png')} />
                             </TouchableOpacity>
                             <View style={[{ width: "100%", height: 4, marginBottom: -20, marginTop: 10, justifyContent: 'space-around', alignItems: 'center' }]}>
@@ -78,28 +78,34 @@ export default class Home extends Component {
                     {/* BERITA */}
                     <ScrollView>
                         <View style={styles.table}>
-                            <Text style={{ fontSize: 20, marginLeft: 50, marginTop: 20, }}>News</Text>
-                            <Text style={{ fontSize: 16, marginLeft: 50, marginBottom: 20 }}>News</Text>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('NewsDetail')}>
+                            <Text style={{ fontSize: 20, marginLeft: 50, marginTop: 20, marginRight: 10 }}>News</Text>
+                            <Text style={{ fontSize: 16, marginLeft: 50, marginBottom: 20, marginRight: 10 }}>Info Solo Lockdown Sampai Januari: Hoax! </Text>
+                            </TouchableOpacity>
                         </View>
-
                         <View style={styles.table}>
-                            <Text style={{ fontSize: 20, marginLeft: 50, marginTop: 20, }}>News</Text>
-                            <Text style={{ fontSize: 16, marginLeft: 50, marginBottom: 20 }}>News</Text>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('NewsDetail')}>
+                            <Text style={{ fontSize: 20, marginLeft: 50, marginTop: 20, marginRight: 10 }}>News</Text>
+                            <Text style={{ fontSize: 16, marginLeft: 50, marginBottom: 20, marginRight: 10 }}>Info Solo Lockdown Sampai Januari: Hoax! </Text>
+                            </TouchableOpacity>
                         </View>
-
                         <View style={styles.table}>
-                            <Text style={{ fontSize: 20, marginLeft: 50, marginTop: 20, }}>News</Text>
-                            <Text style={{ fontSize: 16, marginLeft: 50, marginBottom: 20 }}>News</Text>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('NewsDetail')}>
+                            <Text style={{ fontSize: 20, marginLeft: 50, marginTop: 20, marginRight: 10 }}>News</Text>
+                            <Text style={{ fontSize: 16, marginLeft: 50, marginBottom: 20, marginRight: 10 }}>Info Solo Lockdown Sampai Januari: Hoax! </Text>
+                            </TouchableOpacity>
                         </View>
-
                         <View style={styles.table}>
-                            <Text style={{ fontSize: 20, marginLeft: 50, marginTop: 20, }}>News</Text>
-                            <Text style={{ fontSize: 16, marginLeft: 50, marginBottom: 20 }}>News</Text>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('NewsDetail')}>
+                            <Text style={{ fontSize: 20, marginLeft: 50, marginTop: 20, marginRight: 10 }}>News</Text>
+                            <Text style={{ fontSize: 16, marginLeft: 50, marginBottom: 20, marginRight: 10 }}>Info Solo Lockdown Sampai Januari: Hoax! </Text>
+                            </TouchableOpacity>
                         </View>
-
                         <View style={styles.table}>
-                            <Text style={{ fontSize: 20, marginLeft: 50, marginTop: 20, }}>News</Text>
-                            <Text style={{ fontSize: 16, marginLeft: 50, marginBottom: 20 }}>News</Text>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('NewsDetail')}>
+                            <Text style={{ fontSize: 20, marginLeft: 50, marginTop: 20, marginRight: 10 }}>News</Text>
+                            <Text style={{ fontSize: 16, marginLeft: 50, marginBottom: 20, marginRight: 10 }}>Info Solo Lockdown Sampai Januari: Hoax! </Text>
+                            </TouchableOpacity>
                         </View>
                     </ScrollView>
                 </View>

@@ -11,6 +11,7 @@ import {
     Login,
     SignUp,
     News,
+    NewsDetail,
     Splash
 } from '../pages';
 import { BottomNavigator } from '../components';
@@ -38,6 +39,7 @@ const Router = () => {
             <Stack.Screen name="SignUp" component={SignUp} options={{ headerShown: false }} />
             <Stack.Screen name="MedCheckResult" component={MedCheckResult} options={{ headerShown: false }} />
             <Stack.Screen name="News" component={News} options={{ headerShown: false }} />
+            <Stack.Screen name="NewsDetail" component={NewsDetail} options={{ headerShown: false }} />
             <Stack.Screen name="Klinik" component={Klinik} options={{ headerShown: false }} />
             <Stack.Screen name="MainApp" component={MainApp} options={{ headerShown: false }} />
         </Stack.Navigator>

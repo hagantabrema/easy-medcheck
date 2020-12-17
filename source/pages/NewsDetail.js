@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, ScrollView, Image } from 'react-native'
 import { ACTIVE_COLOR, INACTIVE_COLOR } from '../utils/constant'
 
 const NewsDetail = () => {
@@ -12,7 +12,21 @@ const NewsDetail = () => {
 
             {/* DESKRIPSI PENYAKIT */}
             <ScrollView>
-                <Text style={{ padding: 15 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus posuere magna, eget tincidunt odio imperdiet nec. Nam ultricies, lacus at blandit porta, augue sapien fermentum felis, eu vehicula diam arcu nec dui. Ut nec nisi vel nulla tincidunt dapibus et et tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla blandit pharetra blandit. Morbi diam velit, volutpat eu dui id, malesuada dictum tellus. Pellentesque nisi quam, vulputate nec sagittis vitae, lacinia quis risus. Donec feugiat accumsan nunc at accumsan. Suspendisse pharetra elit eget consectetur porttitor. Duis tincidunt consectetur elit, a pharetra enim fermentum in. Mauris dictum eleifend sapien id varius. Ut sagittis ipsum venenatis nulla varius semper. Maecenas iaculis scelerisque nisi, ut pulvinar sem dapibus eget. Phasellus laoreet tellus est, vel viverra nibh consectetur et. Pellentesque mattis mattis risus a tincidunt.</Text>
+                <View style={{ paddingLeft: 15, paddingRight:15, paddingTop: 15, alignItems: 'center'}}>
+                <Image source={require('../assets/images/HeaderNews.png')} />
+                </View>
+            <Text style={{ paddingLeft: 15, paddingRight:15, paddingTop: 15 }}>Solo - Beredar informasi di aplikasi pesan dan media sosial bahwa Kota Solo lockdown hingga sebulan ke depan. Pemkot Solo menegaskan informasi tersebut adalah hoax!
+                Ketua Pelaksana Harian Gugus Tugas COVID-19 Solo, Ahyani, menegaskan informasi tersebut adalah salah. Pemkot Solo hanya melakukan pengetatan dan pembatasan.</Text>
+                <Text style={{ paddingLeft: 15, paddingRight:15 }}>
+                    "Tidak ada lockdown. Kita hanya mengetatkan dan membatasi saja agar tidak terjadi penularan COVID-19 selama libur akhir tahun," kata Ahyani saat dihubungi detikcom, Sabtu (5/12/2020). </Text>
+                <Text style={{ paddingLeft: 15, paddingRight:15 }}>
+                    Pria yang menjabat Sekretaris Daerah Kota Solo itu mengatakan akses masuk dari dan ke Kota Solo tetap dibuka. Namun ketika warga luar kota masuk ke Solo harus dikarantina selama 14 hari.</Text>
+                <Text style={{ paddingLeft: 15, paddingRight:15 }}>
+                    "Ini untuk mengantisipasi pemudik dan wisatawan masuk ke Solo. Kita karantina dulu 14 hari untuk memastikan dia tidak membawa virus," ujarnya.</Text>
+                <Text style={{ paddingLeft: 15, paddingRight:15 }}>
+                    Sebelumnya, Wali Kota Solo FX Hadi Rudyatmo mengatakan akan mengaktifkan rumah karantina di Benteng Vastenburg mulai 15 Desember 2020 selama sebulan. Pihaknya mulai memasang barak pada 10 Desember 2020.</Text>
+                <Text style={{ paddingLeft: 15, paddingRight:15 }}>
+                    Rudy mengatakan akan bekerja sama dengan pengelola terminal, stasiun dan bandara agar bisa melakukan screening terhadap penumpang.</Text>
             </ScrollView>
         </View>
     )
@@ -24,5 +38,11 @@ const styles = StyleSheet.create({
     titleBackground: {
         backgroundColor: ACTIVE_COLOR,
         padding: 30
-    }
+    },
+    textTitle: {
+        fontSize: 50,
+        fontWeight: 'bold',
+        color: 'white',
+        textAlign: 'center'
+    },
 })
