@@ -8,6 +8,8 @@ import {
     Klinik,
     MedCheck,
     MedCheckResult,
+    Login,
+    SignUp,
     News,
     Splash
 } from '../pages';
@@ -32,6 +34,8 @@ const Router = () => {
             <Stack.Screen name="Splash" component={Splash} options={{ headerShown: false }} />
             <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
             <Stack.Screen name="MedCheck" component={MedCheck} options={{ headerShown: false }} />
+            <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
+            <Stack.Screen name="SignUp" component={SignUp} options={{ headerShown: false }} />
             <Stack.Screen name="MedCheckResult" component={MedCheckResult} options={{ headerShown: false }} />
             <Stack.Screen name="News" component={News} options={{ headerShown: false }} />
             <Stack.Screen name="Klinik" component={Klinik} options={{ headerShown: false }} />

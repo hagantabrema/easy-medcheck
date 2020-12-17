@@ -8,7 +8,7 @@ const Splash = ({ navigation }) => {
     //navigation dari splash screen ke home, 2000 itu 2000ms = 2 detik => durasi splash screen
     useEffect(() => {
         setTimeout(() => {
-            navigation.replace('MainApp');
+            navigation.replace('Login');
         }, 2000)
     }, [navigation]);
 

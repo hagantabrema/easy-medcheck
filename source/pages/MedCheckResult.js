@@ -29,7 +29,15 @@ export default class MedCheckResult extends Component {
 
                 {/* DESKRIPSI PENYAKIT */}
                 <ScrollView>
-                    <Text style={{ padding: 15 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed maximus posuere magna, eget tincidunt odio imperdiet nec. Nam ultricies, lacus at blandit porta, augue sapien fermentum felis, eu vehicula diam arcu nec dui. Ut nec nisi vel nulla tincidunt dapibus et et tortor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla blandit pharetra blandit. Morbi diam velit, volutpat eu dui id, malesuada dictum tellus. Pellentesque nisi quam, vulputate nec sagittis vitae, lacinia quis risus. Donec feugiat accumsan nunc at accumsan. Suspendisse pharetra elit eget consectetur porttitor. Duis tincidunt consectetur elit, a pharetra enim fermentum in. Mauris dictum eleifend sapien id varius. Ut sagittis ipsum venenatis nulla varius semper. Maecenas iaculis scelerisque nisi, ut pulvinar sem dapibus eget. Phasellus laoreet tellus est, vel viverra nibh consectetur et. Pellentesque mattis mattis risus a tincidunt.</Text>
+                    <Text style={{ paddingLeft: 15, paddingRight:15, paddingTop: 15 }}>Flu menyerang paru-paru, hidung, dan tenggorokan. Anak-anak, orang dewasa yang lebih tua, wanita hamil, dan orang dengan penyakit kronis atau sistem kekebalan tubuh lemah berisiko tinggi.</Text>
+                    <Text style={{ paddingLeft: 15, paddingRight:15 }}>Gejala-Gejala:</Text>
+                    <Text style={{ paddingLeft: 15, paddingRight:15}}>Biasanya dapat didiagnosis sendiri</Text>
+                    <Text style={{ paddingLeft: 15, paddingRight:15 }}>Gejalanya meliputi demam, menggigil, nyeri otot, batuk, pilek, sakit kepala, dan kelelahan</Text>
+                    <Text style={{ paddingLeft: 15, paddingRight:15 }}>Pengobatan Pertama:</Text>
+                    <Text style={{ paddingLeft: 15, paddingRight:15 }}>Flu diobati terutama dengan beristirahat dan cairan untuk membantu tubuh melawan infeksi. Penghilang rasa sakit anti peradagangan yang tersedia bebas dapat membantu meringankan gejala. Vaksin tahunan dapat membantu mencegah flu dan membatasi komplikasinya.</Text>
+                    <Text style={{ paddingLeft: 15, paddingRight:15 }}>Disarankan:</Text>
+                    <Text style={{ paddingLeft: 15, paddingRight:15 }}>Jika flu berkepanjangan segera memeriksakan diri ke penyedia perawatan primer (pcp) atau dokter umum terdekat.</Text>
+                    <Text style={{ paddingLeft: 15, paddingRight:15 }}>Referensi : Informasi Medis Google.</Text>
                 </ScrollView>
             </View>
         )
