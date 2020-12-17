@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, Image, ScrollView } from 'react-native'
+import { Text, StyleSheet, View, Image, ScrollView, TouchableOpacity } from 'react-native'
 import { ACTIVE_COLOR, INACTIVE_COLOR } from '../utils/constant'
 
 export default class MedCheckResult extends Component {
@@ -14,7 +14,9 @@ export default class MedCheckResult extends Component {
                 {/* STATUS BAR */}
                 <View style={{ flexDirection: 'row', backgroundColor: "#C14950" }}>
                     <View style={{ margin: 15 }}>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('Home')}>
                         <Image source={require('../assets/icons/backArrow.png')} />
+                        </TouchableOpacity>
                     </View>
                     <View>
                         <Text style={styles.textStatus}>Hasil Analisa</Text>
