@@ -32,6 +32,7 @@ const Router = () => {
             <Stack.Screen name="Splash" component={Splash} options={{ headerShown: false }} />
             <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
             <Stack.Screen name="MedCheck" component={MedCheck} options={{ headerShown: false }} />
+            <Stack.Screen name="MedCheckResult" component={MedCheckResult} options={{ headerShown: false }} />
             <Stack.Screen name="News" component={News} options={{ headerShown: false }} />
             <Stack.Screen name="Klinik" component={Klinik} options={{ headerShown: false }} />
             <Stack.Screen name="MainApp" component={MainApp} options={{ headerShown: false }} />

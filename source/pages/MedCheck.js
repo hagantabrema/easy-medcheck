@@ -6,10 +6,12 @@ import {
     Image,
     StyleSheet,
     Button,
-    onPress, 
+    onPress,
     ScrollView,
-    AppRegistry
+    AppRegistry,
 } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { ACTIVE_COLOR, INACTIVE_COLOR } from '../utils/constant'
 
 export default class MedCheck extends Component {
 
@@ -22,7 +24,7 @@ export default class MedCheck extends Component {
 
     render() {
         return (
-            <View style={{flex: 3}}>
+            <View style={{ flex: 3 }}>
                 <View style={{ flexDirection: 'row', width: "90%", margin: 15, marginLeft: 17, borderRadius: 10, alignContent: 'space-around' }}>
                     <Text style={{ fontSize: 24, fontWeight: 'bold', margin: 10 }}>Easy Medcheck</Text>
                     <Image style={{ height: 90, width: 90, marginLeft: 30 }} source={require('../assets/images/logo.png')} />
@@ -38,11 +40,10 @@ export default class MedCheck extends Component {
                         <Text style={{ textAlign: 'center', fontSize: 24, fontWeight: 'bold', margin: 10 }}> {this.state.gejala1}</Text>
                     </View>
                 </View>
-                <View style={{alignContent: 'center', marginTop: 350, margin: 10}}>
-                <Button 
-                    title="SUBMIT"
-                    onPress={() => navigation.navigate('MedCheckResults')}
-                />
+                <View style={{ alignContent: 'center', marginTop: 10, margin: 20 }}>
+                    <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('MedCheckResult')}>
+                        <Text style={{ textAlign: 'center', color: '#FFFFFF', fontWeight: 'bold' }}>SUBMIT</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         );
@@ -75,5 +76,11 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         marginLeft: 20,
         marginRight: 20
+    },
+    button: {
+        backgroundColor: ACTIVE_COLOR,
+        padding: 12,
+        borderRadius: 10,
+        marginTop: 10
     }
 })
