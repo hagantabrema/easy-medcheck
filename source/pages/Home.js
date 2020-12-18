@@ -76,35 +76,36 @@ export default class Home extends Component {
                     }}
                 >
                     {/* BERITA */}
+                    <Text style={{ fontWeight: 'bold', fontSize: 20, marginLeft: 20, marginBottom: 5 }}>Berita Terbaru</Text>
                     <ScrollView>
                         <View style={styles.table}>
                             <TouchableOpacity onPress={() => this.props.navigation.navigate('NewsDetail')}>
-                            <Text style={{ fontSize: 20, marginLeft: 50, marginTop: 20, marginRight: 10 }}>News</Text>
-                            <Text style={{ fontSize: 16, marginLeft: 50, marginBottom: 20, marginRight: 10 }}>Info Solo Lockdown Sampai Januari: Hoax! </Text>
+                                <Text style={{ fontSize: 20, marginLeft: 50, marginTop: 20, marginRight: 10 }}>News</Text>
+                                <Text style={{ fontSize: 16, marginLeft: 50, marginBottom: 20, marginRight: 10 }}>Info Solo Lockdown Sampai Januari: Hoax! </Text>
                             </TouchableOpacity>
                         </View>
                         <View style={styles.table}>
                             <TouchableOpacity onPress={() => this.props.navigation.navigate('NewsDetail')}>
-                            <Text style={{ fontSize: 20, marginLeft: 50, marginTop: 20, marginRight: 10 }}>News</Text>
-                            <Text style={{ fontSize: 16, marginLeft: 50, marginBottom: 20, marginRight: 10 }}>Info Solo Lockdown Sampai Januari: Hoax! </Text>
+                                <Text style={{ fontSize: 20, marginLeft: 50, marginTop: 20, marginRight: 10 }}>News</Text>
+                                <Text style={{ fontSize: 16, marginLeft: 50, marginBottom: 20, marginRight: 10 }}>Info Solo Lockdown Sampai Januari: Hoax! </Text>
                             </TouchableOpacity>
                         </View>
                         <View style={styles.table}>
                             <TouchableOpacity onPress={() => this.props.navigation.navigate('NewsDetail')}>
-                            <Text style={{ fontSize: 20, marginLeft: 50, marginTop: 20, marginRight: 10 }}>News</Text>
-                            <Text style={{ fontSize: 16, marginLeft: 50, marginBottom: 20, marginRight: 10 }}>Info Solo Lockdown Sampai Januari: Hoax! </Text>
+                                <Text style={{ fontSize: 20, marginLeft: 50, marginTop: 20, marginRight: 10 }}>News</Text>
+                                <Text style={{ fontSize: 16, marginLeft: 50, marginBottom: 20, marginRight: 10 }}>Info Solo Lockdown Sampai Januari: Hoax! </Text>
                             </TouchableOpacity>
                         </View>
                         <View style={styles.table}>
                             <TouchableOpacity onPress={() => this.props.navigation.navigate('NewsDetail')}>
-                            <Text style={{ fontSize: 20, marginLeft: 50, marginTop: 20, marginRight: 10 }}>News</Text>
-                            <Text style={{ fontSize: 16, marginLeft: 50, marginBottom: 20, marginRight: 10 }}>Info Solo Lockdown Sampai Januari: Hoax! </Text>
+                                <Text style={{ fontSize: 20, marginLeft: 50, marginTop: 20, marginRight: 10 }}>News</Text>
+                                <Text style={{ fontSize: 16, marginLeft: 50, marginBottom: 20, marginRight: 10 }}>Info Solo Lockdown Sampai Januari: Hoax! </Text>
                             </TouchableOpacity>
                         </View>
                         <View style={styles.table}>
                             <TouchableOpacity onPress={() => this.props.navigation.navigate('NewsDetail')}>
-                            <Text style={{ fontSize: 20, marginLeft: 50, marginTop: 20, marginRight: 10 }}>News</Text>
-                            <Text style={{ fontSize: 16, marginLeft: 50, marginBottom: 20, marginRight: 10 }}>Info Solo Lockdown Sampai Januari: Hoax! </Text>
+                                <Text style={{ fontSize: 20, marginLeft: 50, marginTop: 20, marginRight: 10 }}>News</Text>
+                                <Text style={{ fontSize: 16, marginLeft: 50, marginBottom: 20, marginRight: 10 }}>Info Solo Lockdown Sampai Januari: Hoax! </Text>
                             </TouchableOpacity>
                         </View>
                     </ScrollView>

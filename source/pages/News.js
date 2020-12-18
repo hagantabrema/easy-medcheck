@@ -14,7 +14,11 @@ export default class News extends Component {
                     <TouchableOpacity style={{ margin: 15 }} onPress={() => this.props.navigation.navigate('Home')}>
                         <Image source={require('../assets/icons/backArrow.png')} />
                     </TouchableOpacity>
+                    <View>
+                        <Text style={styles.textStatus}>Berita</Text>
+                    </View>
                 </View>
+
                 {/* BERITA */}
                 <ScrollView>
                     <View style={styles.table}>
@@ -124,5 +128,11 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         marginLeft: 20,
         marginRight: 20
+    },
+    textStatus: {
+        color: 'white',
+        marginTop: 12,
+        fontSize: 18,
+        fontWeight: 'bold'
     }
 })

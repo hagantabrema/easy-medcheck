@@ -54,7 +54,7 @@ export default class SignUp extends Component {
                         }}
                     />
                     <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('Login')}>
-                        <Text style={{ textAlign: 'center', color: '#FFFFFF', fontWeight: 'bold' }}>SUBMIT</Text>
+                        <Text style={{ textAlign: 'center', color: '#FFFFFF', fontWeight: 'bold' }}>SIGN UP</Text>
                     </TouchableOpacity>
                     <Text style={{ textAlign: "center", marginTop: 60 }}>Telkom Digital Talent 2020</Text>
                 </View>

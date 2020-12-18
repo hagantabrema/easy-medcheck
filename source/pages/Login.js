@@ -48,10 +48,10 @@ export default class Login extends Component {
                         }}
                     />
                     <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate('MainApp')}>
-                        <Text style={{ textAlign: 'center', color: '#FFFFFF', fontWeight: 'bold' }}>SUBMIT</Text>
+                        <Text style={{ textAlign: 'center', color: '#FFFFFF', fontWeight: 'bold' }}>LOGIN</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => this.props.navigation.navigate('SignUp')}>
-                        <Text style={{ textAlign: 'center', fontWeight: 'bold' }}>Don't have an accout? Sign Up</Text>
+                        <Text style={{ textAlign: 'center', fontWeight: 'bold', textDecorationLine: 'underline', marginTop: 10 }}>Don't have an account? Sign Up</Text>
                     </TouchableOpacity>
                     <Text style={{ textAlign: "center", marginTop: 60 }}>Telkom Digital Talent 2020</Text>
                 </View>
