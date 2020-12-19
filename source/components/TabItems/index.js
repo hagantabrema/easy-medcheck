@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
-import { HomeIcon, HomeActiveIcon, CheckIcon, CheckActiveIcon, KlinikIcon, KlinikActiveIcon } from 'EasyMedCheck/source/assets/icons'
+import { HomeIcon, HomeActiveIcon, CheckIcon, CheckActiveIcon, KlinikIcon, KlinikActiveIcon, ProfileIcon, ProfileActiveIcon } from 'EasyMedCheck/source/assets/icons'
 import { ACTIVE_COLOR, INACTIVE_COLOR } from '../../utils/constant'
 
 const TabItems = ({ isFocused, onPress, onLongPress, label }) => {
@@ -11,6 +11,8 @@ const TabItems = ({ isFocused, onPress, onLongPress, label }) => {
         if (label === "MedCheck") return isFocused ? <CheckActiveIcon/> : <CheckIcon/>
 
         if (label === "Klinik") return isFocused ? <KlinikActiveIcon/> : <KlinikIcon/>
+
+        if (label === "Profile") return isFocused ? <ProfileActiveIcon/> : <ProfileIcon/>
 
         return <HomeIcon/>
     }
