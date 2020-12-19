@@ -1,11 +1,8 @@
-import axios, {AxiosInstance} from 'axios';
-import AsyncStorage from '@react-native-community/async-storage';
-import {IBackendResponse, SparringRoomDataProps} from 'src/interface';
-import {BACKEND_API_URL} from 'src/api';
-import {AssessmentDataProps} from 'src/interface';
+import axios from 'axios';
 
-const NEWSAPI_API_KEY = 'apiKey=2cac7875e9c74047a7cc60556c3a971b';
-const SYMPTOM_CHECKER_BASE_URL = 'https://priaid-symptom-checker-v1.p.rapidapi.com/';
+const NEWSAPI_API_KEY = '2cac7875e9c74047a7cc60556c3a971b';
+const SYMPTOM_CHECKER_BASE_URL =
+    'https://priaid-symptom-checker-v1.p.rapidapi.com/';
 const NEWSAPI_BASE_URL = 'http://newsapi.org/v2';
 
 export const getHealthNews = () =>
@@ -22,25 +19,27 @@ export const getHealthNews = () =>
             withCredentials: true,
         })
             .then(({data}) => {
-                resolve(data);
+                resolve(data.articles);
             })
             .catch(reject);
     });
 
-export const getDiagnosis = (
-    listOfSymptoms,
-    gender,
-    year_of_birth,
-) =>
+export const getDiagnosis = (listOfSymptoms, gender, year_of_birth) =>
     new Promise((resolve, reject) => {
         axios({
             method: 'GET',
-            baseURL: NEWSAPI_BASE_URL,
-            url: '/diagnosis',
-            params: {symptoms: listOfSymptoms, gender: gender, year_of_birth: year_of_birth, language: 'en-gb'},
+            url: 'https://priaid-symptom-checker-v1.p.rapidapi.com/diagnosis',
+            params: {
+                symptoms: listOfSymptoms,
+                gender: gender,
+                year_of_birth: year_of_birth,
+                language: 'en-gb',
+                format: 'json',
+            },
             headers: {
-                'x-rapidapi-key': '714c3d6edbmsh2cb94f2adbc24d7p19c74ejsnf5150f35691f',
-                'x-rapidapi-host': 'priaid-symptom-checker-v1.p.rapidapi.com'
+                'x-rapidapi-key':
+                    '714c3d6edbmsh2cb94f2adbc24d7p19c74ejsnf5150f35691f',
+                'x-rapidapi-host': 'priaid-symptom-checker-v1.p.rapidapi.com',
             },
             withCredentials: true,
         })
@@ -50,17 +49,17 @@ export const getDiagnosis = (
             .catch(reject);
     });
 
-export const getIssueInfo = (
-    issue_id
-): =>
+export const getIssueInfo = (issue_id) =>
     new Promise((resolve, reject) => {
         axios({
             method: 'GET',
-            url: 'https://priaid-symptom-checker-v1.p.rapidapi.com/issues/1/info',
+            url:
+                'https://priaid-symptom-checker-v1.p.rapidapi.com/issues/1/info',
             params: {language: 'en-gb'},
             headers: {
-                'x-rapidapi-key': '714c3d6edbmsh2cb94f2adbc24d7p19c74ejsnf5150f35691f',
-                'x-rapidapi-host': 'priaid-symptom-checker-v1.p.rapidapi.com'
+                'x-rapidapi-key':
+                    '714c3d6edbmsh2cb94f2adbc24d7p19c74ejsnf5150f35691f',
+                'x-rapidapi-host': 'priaid-symptom-checker-v1.p.rapidapi.com',
             },
             withCredentials: true,
         })
@@ -70,3 +69,7 @@ export const getIssueInfo = (
             .catch(reject);
     });
 
+console.log('TEST A FILE');
+getDiagnosis('[234, 11]', 'male', '1984')
+    .then((result) => console.log('result'))
+    .catch((error) => console.log('wrong', error));

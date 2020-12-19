@@ -2,7 +2,9 @@
   "name": "EasyMedCheck",
   "version": "0.0.1",
   "private": true,
+  "type": "module",
   "scripts": {
+    "a-file": "node --experimental-modules source/api/index.js",
     "android": "cls && SET ENVFILE=.env && react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
