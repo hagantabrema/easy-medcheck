@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState, useCallback} from 'react';
 import {
     StyleSheet,
     Text,
@@ -9,13 +9,17 @@ import {
 } from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {getHealthNews} from '../api';
+import {Action, Store} from '../context';
+import AppLoadingScreen from './loading/AppLoadingScreen';
 
 export default function Home() {
-    const [isLoading, setIsLoading] = useState([]);
+    const globalState = useContext(Store.StateContext);
+    const dispatch = useCallback(useContext(Store.DispatchContext), []);
+
     const [listArticles, setListArticles] = useState([]);
 
     useEffect(() => {
-        setIsLoading(true);
+        Action.setLoadingPage(dispatch, true);
         const fetchHealthNewsList = () => {
             getHealthNews()
                 .then((res) => {
@@ -28,10 +32,10 @@ export default function Home() {
                         err.stack,
                     );
                 })
-                .finally(() => setIsLoading(false));
+                .finally(() => Action.setLoadingPage(dispatch, false));
         };
         fetchHealthNewsList();
-    }, []);
+    }, [dispatch]);
 
     return (
         <View style={{flex: 2}}>
@@ -191,33 +195,37 @@ export default function Home() {
                     Berita Terbaru
                 </Text>
                 <ScrollView>
-                    {listArticles.map((article, idx) => (
-                        <View key={'article-' + idx} style={styles.table}>
-                            <TouchableOpacity
-                                onPress={() =>
-                                    this.props.navigation.navigate('NewsDetail')
-                                }>
-                                <Text
-                                    style={{
-                                        fontSize: 20,
-                                        marginLeft: 50,
-                                        marginTop: 20,
-                                        marginRight: 10,
-                                    }}>
-                                    {article.title}
-                                </Text>
-                                <Text
-                                    style={{
-                                        fontSize: 16,
-                                        marginLeft: 50,
-                                        marginBottom: 20,
-                                        marginRight: 10,
-                                    }}>
-                                    {article.description}
-                                </Text>
-                            </TouchableOpacity>
-                        </View>
-                    ))}
+                    <AppLoadingScreen>
+                        {listArticles.map((article, idx) => (
+                            <View key={'article-' + idx} style={styles.table}>
+                                <TouchableOpacity
+                                    onPress={() =>
+                                        this.props.navigation.navigate(
+                                            'NewsDetail',
+                                        )
+                                    }>
+                                    <Text
+                                        style={{
+                                            fontSize: 20,
+                                            marginLeft: 50,
+                                            marginTop: 20,
+                                            marginRight: 10,
+                                        }}>
+                                        {article.title}
+                                    </Text>
+                                    <Text
+                                        style={{
+                                            fontSize: 16,
+                                            marginLeft: 50,
+                                            marginBottom: 20,
+                                            marginRight: 10,
+                                        }}>
+                                        {article.description}
+                                    </Text>
+                                </TouchableOpacity>
+                            </View>
+                        ))}
+                    </AppLoadingScreen>
                 </ScrollView>
             </View>
         </View>
