@@ -1,17 +1,16 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import { NavigationContainer } from '@react-navigation/native';
+import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 import Router from './source/router/router';
 
-
 const App = () => {
-  return (
-    <NavigationContainer>
-      <Router />
-    </NavigationContainer>
-  )
-}
+    return (
+        <NavigationContainer>
+            <Router />
+        </NavigationContainer>
+    );
+};
 
-export default App
+export default App;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

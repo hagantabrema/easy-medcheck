@@ -69,7 +69,7 @@ export const getIssueInfo = (issue_id) =>
             .catch(reject);
     });
 
-console.log('TEST A FILE');
-getDiagnosis('[234, 11]', 'male', '1984')
-    .then((result) => console.log('result'))
-    .catch((error) => console.log('wrong', error));
+// console.log('TEST A FILE');
+// getHealthNews()
+//     .then((result) => console.log(result))
+//     .catch((error) => console.log('wrong', error));
