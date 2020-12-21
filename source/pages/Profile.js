@@ -22,11 +22,12 @@ export default class Profile extends Component {
                     </View>
                 </View>
 
-                {/* NAMA PENGGUNA */}
+                {/* DETAIL PENGGUNA */}
                 <View style={styles.titleBackground}>
                     <Text style={{ fontSize: 22, fontWeight: 'bold', color: 'white', textAlign: 'center' }}>Haganta Brema Bangun</Text>
-                    <Text style={{ fontSize: 15, color: 'white', textAlign: 'center', marginTop: 10 }}>hagantabangun@gmail.com</Text>
-                    <Text style={{ fontSize: 15, color: 'white', textAlign: 'center', marginTop: 10 }}>Bandung, Jawa Barat</Text>
+                    <Text style={{ fontSize: 15, color: 'white', textAlign: 'center', marginTop: 15 }}>hagantabrema</Text>
+                    <Text style={{ fontSize: 15, color: 'white', textAlign: 'center'}}>hagantabangun@gmail.com</Text>
+                    <Text style={{ fontSize: 15, color: 'white', textAlign: 'center'}}>Bandung, Jawa Barat</Text>
                 </View>
 
                 {/* BUTTON */}

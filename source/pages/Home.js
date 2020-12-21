@@ -7,12 +7,14 @@ import {
     Image,
     ScrollView,
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native'
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {getHealthNews} from '../api';
 import {Action, Store} from '../context';
 import AppLoadingScreen from './loading/AppLoadingScreen';
 
 export default function Home() {
+    const navigation = useNavigation();
     const globalState = useContext(Store.StateContext);
     const dispatch = useCallback(useContext(Store.DispatchContext), []);
 
@@ -52,15 +54,15 @@ export default function Home() {
                 <View style={{margin: 5}}>
                     <Image source={require('../assets/icons/search.png')} />
                 </View>
-                {/*<View>*/}
-                {/*    <TextInput*/}
-                {/*        style={styles.input}*/}
-                {/*        placeholder="Cari gejala penyakit..."*/}
-                {/*        //placeholderTextColor="#000"*/}
-                {/*        onChangeText={this.onChangeText}*/}
-                {/*        defaultValue={this.state.text}*/}
-                {/*    />*/}
-                {/*</View>*/}
+                <View>
+                   <TextInput
+                       style={styles.input}
+                       placeholder="Cari gejala penyakit..."
+                       //placeholderTextColor="#000"
+                    //    onChangeText={this.onChangeText}
+                    //    defaultValue={this.state.text}
+                   />
+                </View>
             </View>
 
             {/* ICON BAR */}
@@ -91,7 +93,7 @@ export default function Home() {
                         ]}>
                         <TouchableOpacity
                             onPress={() =>
-                                this.props.navigation.navigate('Klinik')
+                                navigation.navigate('Klinik')
                             }>
                             <Image
                                 source={require('../assets/icons/klinik.png')}
@@ -125,7 +127,7 @@ export default function Home() {
                         ]}>
                         <TouchableOpacity
                             onPress={() =>
-                                this.props.navigation.navigate('MedCheck')
+                                navigation.navigate('MedCheck')
                             }>
                             <Image
                                 source={require('../assets/icons/medcheck.png')}
@@ -158,7 +160,7 @@ export default function Home() {
                         ]}>
                         <TouchableOpacity
                             onPress={() =>
-                                this.props.navigation.navigate('News')
+                                navigation.navigate('News')
                             }>
                             <Image
                                 source={require('../assets/icons/news.png')}
@@ -200,7 +202,7 @@ export default function Home() {
                             <View key={'article-' + idx} style={styles.table}>
                                 <TouchableOpacity
                                     onPress={() =>
-                                        this.props.navigation.navigate(
+                                        navigation.navigate(
                                             'NewsDetail',
                                         )
                                     }>

@@ -24,7 +24,7 @@ export default class Klinik extends Component {
     
                 {/* MAPS */}
                 <View>
-                    <Image source={require('../assets/images/dummyloc.png')} />
+                    <Image style={{ width: 400, height: 695 }} source={require('../assets/images/dummyloc.png')} />
                 </View>
             </View>
         )

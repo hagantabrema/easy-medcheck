@@ -14,8 +14,10 @@ import {
     TouchableHighlight,
     TouchableOpacity,
 } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
 export default function News(prop) {
+    const navigation = useNavigation();
     return (
         <>
             <View>
@@ -24,7 +26,7 @@ export default function News(prop) {
                     style={{flexDirection: 'row', backgroundColor: '#C14950'}}>
                     <TouchableOpacity
                         style={{margin: 15}}
-                        onPress={() => this.props.navigation.navigate('Home')}>
+                        onPress={() => navigation.navigate('Home')}>
                         <Image
                             source={require('../assets/icons/backArrow.png')}
                         />
@@ -39,7 +41,7 @@ export default function News(prop) {
                     <View style={styles.table}>
                         <TouchableOpacity
                             onPress={() =>
-                                this.props.navigation.navigate('NewsDetail')
+                                navigation.navigate('NewsDetail')
                             }>
                             <Text
                                 style={{
@@ -65,7 +67,7 @@ export default function News(prop) {
                     <View style={styles.table}>
                         <TouchableOpacity
                             onPress={() =>
-                                this.props.navigation.navigate('NewsDetail')
+                                navigation.navigate('NewsDetail')
                             }>
                             <Text
                                 style={{
@@ -90,7 +92,7 @@ export default function News(prop) {
                     <View style={styles.table}>
                         <TouchableOpacity
                             onPress={() =>
-                                this.props.navigation.navigate('NewsDetail')
+                                navigation.navigate('NewsDetail')
                             }>
                             <Text
                                 style={{
@@ -115,7 +117,7 @@ export default function News(prop) {
                     <View style={styles.table}>
                         <TouchableOpacity
                             onPress={() =>
-                                this.props.navigation.navigate('NewsDetail')
+                                navigation.navigate('NewsDetail')
                             }>
                             <Text
                                 style={{
@@ -140,7 +142,7 @@ export default function News(prop) {
                     <View style={styles.table}>
                         <TouchableOpacity
                             onPress={() =>
-                                this.props.navigation.navigate('NewsDetail')
+                                navigation.navigate('NewsDetail')
                             }>
                             <Text
                                 style={{
@@ -165,7 +167,7 @@ export default function News(prop) {
                     <View style={styles.table}>
                         <TouchableOpacity
                             onPress={() =>
-                                this.props.navigation.navigate('NewsDetail')
+                                navigation.navigate('NewsDetail')
                             }>
                             <Text
                                 style={{
@@ -190,7 +192,7 @@ export default function News(prop) {
                     <View style={styles.table}>
                         <TouchableOpacity
                             onPress={() =>
-                                this.props.navigation.navigate('NewsDetail')
+                                navigation.navigate('NewsDetail')
                             }>
                             <Text
                                 style={{
@@ -215,7 +217,7 @@ export default function News(prop) {
                     <View style={styles.table}>
                         <TouchableOpacity
                             onPress={() =>
-                                this.props.navigation.navigate('NewsDetail')
+                                navigation.navigate('NewsDetail')
                             }>
                             <Text
                                 style={{
@@ -240,7 +242,7 @@ export default function News(prop) {
                     <View style={styles.table}>
                         <TouchableOpacity
                             onPress={() =>
-                                this.props.navigation.navigate('NewsDetail')
+                                navigation.navigate('NewsDetail')
                             }>
                             <Text
                                 style={{
@@ -265,7 +267,7 @@ export default function News(prop) {
                     <View style={styles.table}>
                         <TouchableOpacity
                             onPress={() =>
-                                this.props.navigation.navigate('NewsDetail')
+                                navigation.navigate('NewsDetail')
                             }>
                             <Text
                                 style={{
@@ -290,7 +292,7 @@ export default function News(prop) {
                     <View style={styles.table}>
                         <TouchableOpacity
                             onPress={() =>
-                                this.props.navigation.navigate('NewsDetail')
+                                navigation.navigate('NewsDetail')
                             }>
                             <Text
                                 style={{
@@ -315,7 +317,7 @@ export default function News(prop) {
                     <View style={styles.table}>
                         <TouchableOpacity
                             onPress={() =>
-                                this.props.navigation.navigate('NewsDetail')
+                                navigation.navigate('NewsDetail')
                             }>
                             <Text
                                 style={{
@@ -340,7 +342,7 @@ export default function News(prop) {
                     <View style={styles.table}>
                         <TouchableOpacity
                             onPress={() =>
-                                this.props.navigation.navigate('NewsDetail')
+                                navigation.navigate('NewsDetail')
                             }>
                             <Text
                                 style={{
@@ -365,7 +367,7 @@ export default function News(prop) {
                     <View style={styles.table}>
                         <TouchableOpacity
                             onPress={() =>
-                                this.props.navigation.navigate('NewsDetail')
+                                navigation.navigate('NewsDetail')
                             }>
                             <Text
                                 style={{
@@ -390,7 +392,7 @@ export default function News(prop) {
                     <View style={styles.table}>
                         <TouchableOpacity
                             onPress={() =>
-                                this.props.navigation.navigate('NewsDetail')
+                                navigation.navigate('NewsDetail')
                             }>
                             <Text
                                 style={{

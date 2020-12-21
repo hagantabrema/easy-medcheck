@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React, {useState, Component} from 'react';
 import {
     StyleSheet,
@@ -10,6 +11,7 @@ import {
 import {ACTIVE_COLOR, INACTIVE_COLOR} from '../utils/constant';
 
 export default function NewsDetail(props) {
+    const navigation = useNavigation();
     return (
         <>
             <View>
@@ -18,7 +20,7 @@ export default function NewsDetail(props) {
                     style={{flexDirection: 'row', backgroundColor: '#C14950'}}>
                     <TouchableOpacity
                         style={{margin: 15}}
-                        onPress={() => this.props.navigation.navigate('News')}>
+                        onPress={() => navigation.navigate('News')}>
                         <Image
                             source={require('../assets/icons/backArrow.png')}
                         />
